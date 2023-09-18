@@ -1,14 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Bookstore</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
+<html lang="en">
 
-  <body>
-    Hello world
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title> Bookstore </title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="../assets/books.png" type="image/x-icon" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo"> Bookstore </a>
+
+      <div class="nav__users">
+        <img class="nav__users-avatar" src="../assets/user.png" alt="">
+        <span class="nav__users-name">John Doe</span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="action-bar">
+
+      <input type="text" placeholder="Search books">
+      <button class="btn btn-success" data-trigger="modal" data-target=".modal-1" aria-open="false"> Add book </button>
+    </div>
+
+
+
+    <div class="modal modal-1">
+      <div class="modal__backdrop"> </div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Add book</h2>
+            <div class="modal__cancel"> <i class="uil uil-multiply"></i> </div>
+          </div>
+        </div>
+        <div class="modal__main">
+          <form id="newBookFrm">
+            <div class="input-group">
+              <label for="newBookFrm__name"> Name </label>
+              <input id="newBookFrm__name" name="new-book-name" type="text" placeholder="Name" required>
+            </div>
+            <div class="input-group">
+              <label for="newBookFrm__author"> Author </label>
+              <input id="newBookFrm__author" name="new-book-author" type="text" placeholder="Author" required>
+            </div>
+            <div class="input-group">
+              <label for="newBookFrm__topic"> Topic </label>
+              <input id="newBookFrm__topic" name="new-book-topic" type="text" placeholder="Topic" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <button id="createBookBtn" class="btn btn-success"> Create </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="delConfirmModal" class="modal modal-2">
+      <div class="modal__backdrop"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <h1> Delete book </h1>
+        </div>
+        <div class="modal__main">
+          <p> Do you want delete <span id="delBookName">this</span> book? </p>
+        </div>
+        <div class="delConfirmModal__footer">
+          <div class="btn"> Delete </div>
+          <div class="modal__cancel btn btn-danger"> Cancel </div>
+        </div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th> Name </th>
+          <th> Author </th>
+          <th> Topic </th>
+          <th> Action </th>
+        </tr>
+      </thead>
+      <tbody id="booksTableBody">
+
+      </tbody>
+    </table>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>
