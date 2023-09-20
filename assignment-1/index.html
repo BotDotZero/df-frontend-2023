@@ -5,41 +5,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title> Bookstore </title>
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="./assets/img/books.png" type="image/x-icon" />
 </head>
 
 <body>
+
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="nav__logo"> Bookstore </a>
 
       <div class="nav__users">
         <img class="nav__users-avatar" src="./assets/img/user.png" alt="">
-        <span class="nav__users-name">John Doe</span>
+        <span class="nav__users-name">Trình Thanh Phong</span>
       </div>
     </nav>
   </header>
+
   <main>
     <div class="action-bar">
-      <input type="text" placeholder="Search books">
-      <button class="btn btn-success" data-trigger="modal" data-target=".modal-1" aria-open="false"> Add book </button>
+      <input id="searchArea" type="text" placeholder="Search books">
+      <button id="addBtn" class="btn btn-success"> Add book </button>
     </div>
 
-
-
-    <div class="modal modal-1">
-      <div class="modal__backdrop"> </div>
-      <div class="modal__content">
+    <!-- Add Book Modal -->
+    <div id="addBookModal" class="modal">
+      <div class="modal-content">
+        <span class="close modal__cancel">&times;</span>
         <div class="modal__header">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h2>Add book</h2>
-            <div class="modal__cancel"> <i class="uil uil-multiply"></i> </div>
-          </div>
+          <h2> Add book </h2>
         </div>
         <div class="modal__main">
-          <form id="newBookFrm">
+          <form id="newBookFrm" onsubmit="event.preventDefault()">
             <div class="input-group">
               <label for="newBookFrm__name"> Name </label>
               <input id="newBookFrm__name" name="new-book-name" type="text" placeholder="Name" required>
@@ -55,22 +52,26 @@
           </form>
         </div>
         <div class="modal__footer">
-          <button id="createBookBtn" class="btn btn-success"> Create </button>
+          <button type="submit" form="newBookFrm" class="btn btn-success"> Create </button>
         </div>
       </div>
     </div>
 
-    <div id="delConfirmModal" class="modal modal-2">
-      <div class="modal__backdrop"></div>
-      <div class="modal__content">
+    <!-- Delete Book Confirm Modal -->
+    <div id="delCfmModal" class="modal">
+      <div class="modal-content">
+        <span class="close modal__cancel">&times;</span>
         <div class="modal__header">
-          <h1> Delete book </h1>
+          <h2 style="text-align: center;"> Delete book </h2>
         </div>
         <div class="modal__main">
-          <p> Do you want delete <span id="delBookName">this</span> book? </p>
+          <p style="text-align: center;">
+            Do you want delete <br>
+            <strong id="delBookName">this</strong> book?
+          </p>
         </div>
-        <div class="delConfirmModal__footer">
-          <div class="btn"> Delete </div>
+        <div class="modal__footer">
+          <div id="delCfmBtn" class="btn"> Delete </div>
           <div class="modal__cancel btn btn-danger"> Cancel </div>
         </div>
       </div>

@@ -85,9 +85,6 @@ main {
   padding: 15px 0;
 }
 
-#newBookFrm {
-  max-width: 250px;
-}
 
 #newBookFrm input {
   width: 100%;
@@ -119,7 +116,7 @@ td {
 }
 
 
-
+/* 
 .modal {
   position: fixed;
   width: 100%;
@@ -174,11 +171,7 @@ td {
   cursor: pointer;
 }
 
-.delConfirmModal__footer {
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-evenly;
-}
+
 
 .modal--active {
   opacity: 1;
@@ -187,4 +180,67 @@ td {
 
 .modal--active .modal__content {
   top: 25%;
+} */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 200px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  transition: all 300ms linear;
+}
+
+/* Modal Content */
+.modal-content {
+  transition: all 300ms ease-in-out;
+  min-width: 250px;
+  max-width: 25%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  /* width: 80%; */
+}
+
+
+.modal__main {
+  padding: 20px 0px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__footer {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-evenly;
 }
