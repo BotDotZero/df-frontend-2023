@@ -85,7 +85,6 @@ main {
   padding: 15px 0;
 }
 
-
 #newBookFrm input {
   width: 100%;
   margin-bottom: 10px;
@@ -115,95 +114,18 @@ td {
   padding: 10px;
 }
 
-
-/* 
-.modal {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 300ms linear;
-}
-
-.modal .modal__backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.modal .modal__content {
-  transition: all 300ms ease-in-out;
-  min-width: 250px;
-  margin: auto;
-  z-index: 10;
-  position: absolute;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  padding: 15px 30px;
-  border-radius: 5px;
-}
-
-.modal .modal__content .modal__header {
-  margin-bottom: 25px;
-}
-
-.modal .modal__content .modal__main {
-  margin-bottom: 15px;
-}
-
-.modal .modal__content .modal__footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.modal .modal__content .modal__footer>* {
-  cursor: pointer;
-}
-
-
-
-.modal--active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal--active .modal__content {
-  top: 25%;
-} */
-
-/* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 200px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
+  background-color: #000000;
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
   transition: all 300ms linear;
 }
 
@@ -216,7 +138,6 @@ td {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  /* width: 80%; */
 }
 
 
@@ -224,7 +145,7 @@ td {
   padding: 20px 0px;
 }
 
-/* The Close Button */
+/* [X] button */
 .close {
   color: #aaaaaa;
   float: right;
@@ -243,4 +164,14 @@ td {
   padding: 0 10px;
   display: flex;
   justify-content: space-evenly;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: #a364fb;
+  text-decoration: none;
+  margin-top: 20px;
 }

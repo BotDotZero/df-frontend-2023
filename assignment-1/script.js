@@ -128,7 +128,7 @@ var openDelModal = (id, name) => {
 
 
 var closeBtn = document.getElementsByClassName("modal__cancel");
-// Click [x] or Cancel to close modal
+// Click [X] or Cancel to close modal
 for (let i = 0; i < closeBtn.length; i++) {
   closeBtn[i].onclick = function () {
     addBookModal.style.display = "none";
