@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
-
 
 
 function Table(props) {
@@ -21,7 +19,7 @@ function Table(props) {
                   <td> {book.author} </td>
                   <td> {book.topic} </td>
                   <td>
-                     <button className="btn btn-danger">Delete</button>
+                     <button className="btn btn-danger" onClick={() => props.showModal(1, book)}>Delete</button>
                   </td>
                </tr>
             ))}
