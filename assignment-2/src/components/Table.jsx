@@ -1,6 +1,19 @@
 import React from "react";
 
-
+function fillTable(row) {
+   let table = [];
+   for (let i = 0; i < row; i++) {
+      table.push(
+         <tr key={i}>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+         </tr>
+      );
+   }
+   return table;
+}
 function Table(props) {
    return (
       <table>
@@ -13,7 +26,11 @@ function Table(props) {
             </tr>
          </thead>
          <tbody id="booksTableBody">
-            {(props.books).map((book) => (
+            {props.books.length === 0 ? (
+               <tr>
+                  <td colSpan={4} style={{ textAlign: 'center' }}> No data </td>
+               </tr>
+            ) : (props.books).map((book) => (
                <tr key={book.id}>
                   <td> {book.name} </td>
                   <td> {book.author} </td>
@@ -23,6 +40,7 @@ function Table(props) {
                   </td>
                </tr>
             ))}
+            {props.books.length !== 0 && fillTable(props.booksPerPage - props.books.length)}
          </tbody>
       </table>
    );

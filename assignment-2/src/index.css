@@ -30,11 +30,20 @@ code {
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #212529;
+  --white: #ffffff;
+  --font-color: #343a40;
+  --bg-color: #f8f9fa;
+}
+
+[data-theme="dark"] {
+  --bg-color: #343a40;
+  --font-color: #f8f9fa;
 }
 
 body {
-  background-color: var(--light);
+  background-color: var(--bg-color);
 }
+
 
 input {
   padding: 5px 10px;
@@ -55,12 +64,12 @@ input {
 .btn-success {
   margin-left: 10px;
   background-color: var(--success);
-  color: white;
+  color: var(--light);
 }
 
 .btn-danger {
   background-color: var(--danger);
-  color: white;
+  color: var(--light);
 }
 
 /* Navbar */
@@ -70,13 +79,14 @@ input {
   justify-content: space-between;
   padding: 15px 30px;
   border-bottom: 1px solid lightgrey;
-  background: #fff;
+  background: var(--bg-color);
+  color: var(--font-color);
 }
 
 .nav__logo {
   font-size: 1.5rem;
   font-weight: 900;
-  color: var(--dark);
+  color: var(--font-color);
   text-decoration: none;
 }
 
@@ -85,6 +95,13 @@ input {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.nav__users-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 main {
@@ -120,12 +137,18 @@ td {
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: white;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 th,
 td {
   padding: 10px;
+}
+
+tr {
+  transition: all 300ms ease-in-out;
+  height: 52px;
 }
 
 .modal {
@@ -138,7 +161,7 @@ td {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #000000;
+  background-color: #000;
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 300ms linear;
 }
@@ -156,6 +179,7 @@ td {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
+  border-radius: 10px;
 }
 
 
@@ -197,6 +221,67 @@ footer a {
 .page-number.active {
   background-color: var(--primary);
   color: white;
+}
+
+/* Pagination */
+.pagination {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination.hide {
+  display: none;
+}
+
+.pagination>span {
+  background-color: darkgrey;
   border-radius: 5px;
   padding: 5px 10px;
+  cursor: pointer;
+  color: var(--light);
+}
+
+/* Darkmode toggle */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: var(--font-color);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.checkbox-label .ball {
+  background-color: var(--bg-color);
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+  transform: translateX(24px);
 }
