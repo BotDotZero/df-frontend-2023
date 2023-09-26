@@ -28,10 +28,10 @@ function App() {
    const [searchValue, setSearchValue] = useState("");
 
    function search(data) {
+      setCurrentPage(1);
       return data.filter((book) => {
          return book.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
       });
-      setCurrentPage(1);
    }
 
    // Modal
