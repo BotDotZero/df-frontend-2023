@@ -31,6 +31,7 @@ function App() {
       return data.filter((book) => {
          return book.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
       });
+      setCurrentPage(1);
    }
 
    // Modal
