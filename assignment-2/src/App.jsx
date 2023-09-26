@@ -7,28 +7,21 @@ import Paginate from './components/Pagination';
 
 function App() {
    // Data
-   const [books, setBooks] = useState([{ id: 1, name: "Refactoring", author: "Martin Fowler", topic: "Programming" },
-   {
-      id: 2,
-      name: "Designing Data-Intensve Applications",
-      author: "Martin Kleppmann",
-      topic: "Database",
-   },
-   { id: 3, name: "The Phoenix Project", author: "Gene Kim", topic: "DevOps" },
-   { id: 4, name: "Shadow", author: "Gen", topic: "Programming" },
-   {
-      id: 5,
-      name: "Gao",
-      author: "Shen",
-      topic: "Database",
-   },
-   { id: 6, name: "Long", author: "Kim", topic: "DevOps" }]);
+   const [books, setBooks] = useState([
+      { id: 1, name: "Refactoring", author: "Martin Fowler", topic: "Programming" },
+      {
+         id: 2,
+         name: "Designing Data-Intensve Applications",
+         author: "Martin Kleppmann",
+         topic: "Database",
+      },
+      { id: 3, name: "The Phoenix Project", author: "Gene Kim", topic: "DevOps" },
+   ]);
 
    // Search
    const [searchValue, setSearchValue] = useState("");
 
    function search(data) {
-      setCurrentPage(1);
       return data.filter((book) => {
          return book.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
       });
@@ -94,11 +87,10 @@ function App() {
    // Theme
    const [isDark, setIsDark] = useState(true);
    useEffect(() => {
-      if (isDark) {
-         document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-         document.documentElement.setAttribute('data-theme', 'light');
-      }
+      isDark ?
+         document.documentElement.setAttribute('data-theme', 'dark')
+         :
+         document.documentElement.setAttribute('data-theme', 'light')
    }, [isDark]);
 
    // Render

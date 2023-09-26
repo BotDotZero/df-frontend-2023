@@ -31,12 +31,12 @@ code {
   --light: #f8f9fa;
   --dark: #212529;
   --white: #ffffff;
-  --font-color: #343a40;
+  --font-color: #191a2e;
   --bg-color: #f8f9fa;
 }
 
 [data-theme="dark"] {
-  --bg-color: #343a40;
+  --bg-color: #191a2e;
   --font-color: #f8f9fa;
 }
 
@@ -149,6 +149,10 @@ td {
 tr {
   transition: all 300ms ease-in-out;
   height: 52px;
+}
+
+td:last-child {
+  text-align: center;
 }
 
 .modal {
