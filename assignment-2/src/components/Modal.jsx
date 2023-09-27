@@ -17,23 +17,27 @@ function Modal(props) {
                         <h2> Add book </h2>
                      </div>
                      <div className="modal__main">
-                        <form id="newBookFrm" onSubmit={submitForm} >
+                        <form id="newBookForm" onSubmit={submitForm} >
                            <div className="input-group">
-                              <label htmlFor="newBookFrm__name"> Name </label>
-                              <input id="newBookFrm__name" name="new-book-name" type="text" placeholder="Name" required />
+                              <label htmlFor="newBookForm__name"> Name </label>
+                              <input id="newBookForm__name" name="new-book-name" type="text" placeholder="Name" required />
                            </div>
                            <div className="input-group">
-                              <label htmlFor="newBookFrm__author"> Author </label>
-                              <input id="newBookFrm__author" name="new-book-author" type="text" placeholder="Author" required />
+                              <label htmlFor="newBookForm__author"> Author </label>
+                              <input id="newBookForm__author" name="new-book-author" type="text" placeholder="Author" required />
                            </div>
                            <div className="input-group">
-                              <label htmlFor="newBookFrm__topic"> Topic </label>
-                              <input id="newBookFrm__topic" name="new-book-topic" type="text" placeholder="Topic" required />
+                              <label htmlFor="newBookForm__topic"> Topic </label>
+                              <select name="new-book-topic" id="newBookForm__topic" required>
+                                 <option value="programing"> Programming </option>
+                                 <option value="database"> Database </option>
+                                 <option value="devops"> DevOps</option>
+                              </select>
                            </div>
                         </form>
                      </div>
                      <div className="modal__footer">
-                        <button type="submit" form="newBookFrm" className="btn btn-success"> Create </button>
+                        <button type="submit" form="newBookForm" className="btn btn-success"> Create </button>
                      </div>
                   </>
                   :
