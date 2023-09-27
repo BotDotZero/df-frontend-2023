@@ -45,7 +45,8 @@ body {
 }
 
 
-input {
+input,
+select {
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid lightgray;
@@ -116,7 +117,8 @@ main {
   padding: 15px 0;
 }
 
-#newBookForm input {
+#newBookForm input,
+#newBookForm select {
   width: 100%;
   margin-bottom: 10px;
 }
