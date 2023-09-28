@@ -271,6 +271,15 @@ footer a {
   align-items: center;
 }
 
+.fas {
+  font-size: .9rem;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .fa-moon {
   color: #f1c40f;
 }
@@ -290,6 +299,6 @@ footer a {
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked+.checkbox-label .ball {
+.ball.move {
   transform: translateX(24px);
 }

@@ -98,8 +98,10 @@ function App() {
   const [isDark, setIsDark] = useState(true);
   useEffect(() => {
     if (isDark) {
+      document.documentElement.getElementsByClassName('ball')[0].classList.add('move')
       document.documentElement.setAttribute('data-theme', 'dark')
     } else {
+      document.documentElement.getElementsByClassName('ball')[0].classList.remove('move')
       document.documentElement.setAttribute('data-theme', 'light')
     }
   }, [isDark]);
