@@ -30,9 +30,9 @@ function Modal(props) {
                   <label htmlFor="newBookForm__topic">
                      Topic
                      <select name="new-book-topic" id="newBookForm__topic" required>
-                        <option value="programing"> Programming </option>
-                        <option value="database"> Database </option>
-                        <option value="devops"> DevOps</option>
+                        <option value="Programing"> Programming </option>
+                        <option value="Database"> Database </option>
+                        <option value="DevOps"> DevOps</option>
                      </select>
                   </label>
                </div>
