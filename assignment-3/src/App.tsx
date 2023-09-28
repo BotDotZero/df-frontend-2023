@@ -117,7 +117,7 @@ function App() {
           <input id="searchArea" type="text" placeholder="Search books" onKeyUp={(e) => setSearchValue((e.target as HTMLInputElement).value)} />
           <button id="addBtn" className="btn btn-success" onClick={() => showModal(0, {})}> Add book </button>
         </div>
-        <Modal isShow={isShow} typeModal={typeModal} closeModal={() => closeModal()} addBook={(book) => addBook(book)} delBook={() => delBook()} delData={delData} />
+        <Modal isShow={isShow} typeModal={typeModal} closeModal={closeModal} addBook={(book) => addBook(book)} delBook={delBook} delData={delData} />
         <Table books={currentBooks} booksPerPage={booksPerPage} showModal={(options, modalData) => showModal(options, modalData)} />
         <Paginate booksPerPage={booksPerPage} totalBooks={search(books).length} currentPage={currentPage} paginate={paginate} previousPage={previousPage} nextPage={nextPage} />
       </main>
