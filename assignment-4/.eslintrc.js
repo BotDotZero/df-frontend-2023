@@ -4,7 +4,7 @@ module.exports = {
     './node_modules/@dwarvesf/react-eslint-config',
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended',
+    // 'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'next',
@@ -35,7 +35,9 @@ module.exports = {
       presets: [require.resolve('next/babel')],
     },
   },
-  rules: {},
+  rules: {
+    // "prettier/prettier": ["error", { "endOfLine": "auto" }]
+  },
   overrides: [
     {
       files: ['**/*.ts?(x)', '**/*.js?(x)'],
