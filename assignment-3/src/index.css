@@ -52,6 +52,7 @@ select {
   border: 1px solid lightgray;
   outline: none;
   font-size: 1rem;
+  margin-top: 3px;
 }
 
 .btn {

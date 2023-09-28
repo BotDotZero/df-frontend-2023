@@ -8,7 +8,7 @@ function Modal(props) {
    };
    const addContent = (
       <div className="modal-content">
-         <button className="close modal__cancel" onClick={props.closeModal}>&times;</button>
+         <span className="close modal__cancel" onClick={props.closeModal}>&times;</span>
          <div className="modal__header">
             <h2> Add book </h2>
          </div>
@@ -45,7 +45,7 @@ function Modal(props) {
    )
    const delContent = (
       <div className="modal-content">
-         <button className="close modal__cancel" onClick={props.closeModal}>&times;</button>
+         <span className="close modal__cancel" onClick={props.closeModal}>&times;</span>
          <div className="modal__header">
             <h2 style={{ textAlign: 'center' }}> Delete book </h2>
          </div>
