@@ -4,7 +4,7 @@ module.exports = {
     './node_modules/@dwarvesf/react-eslint-config',
     'eslint:recommended',
     'plugin:react/recommended',
-    // 'plugin:prettier/recommended',
+    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'next',
@@ -36,7 +36,7 @@ module.exports = {
     },
   },
   rules: {
-    // "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
   },
   overrides: [
     {
